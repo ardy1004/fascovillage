@@ -1,0 +1,158 @@
+{
+  "project_name": "Landing Page Promo Berkah Ramadan - Fasco Village Bangunjiwo",
+  "objective": "Menghasilkan leads WhatsApp langsung dari calon pembeli rumah (tanpa database, tanpa backend)",
+  "target_market": "Keluarga muda, pekerja Jogja, pembeli rumah pertama",
+  "design_system": {
+    "style": "modern, clean, bright, family-friendly, elegant",
+    "background": "soft white with warm beige gradient, subtle Ramadan accent pattern",
+    "color_palette": {
+      "primary": "#14532D",
+      "secondary": "#166534",
+      "accent": "#C9A227",
+      "background_main": "#FAF9F6",
+      "background_section": "#F3F4F6",
+      "cta_color": "#15803D"
+    },
+    "typography": {
+      "heading": "Poppins SemiBold",
+      "body": "Inter Regular"
+    },
+    "layout": "mobile-first, spacious, high-contrast CTA, card-based grid"
+  },
+  "technical_spec": {
+    "responsive": true,
+    "mobile_first": true,
+    "no_database": true,
+    "form_redirect_whatsapp": true,
+    "whatsapp_number": "6281391278889",
+    "image_format": "webp",
+    "sticky_whatsapp_button": true
+  },
+  "badges": [
+    "Tersisa 6 Unit",
+    "Promo Berkah Ramadan"
+  ],
+  "images": [
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864807/image_2_dd7tm8.webp",
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864807/image_1_yhv2kw.webp",
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864807/Akses_Jalan_1_pbqpeu.webp",
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864807/image_7_t3urwn.webp",
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864807/Akses_Jalan_3_h0kyuu.webp",
+    "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864808/image_5_x2vaoz.webp"
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Rumah Siap Bangun di Bangunjiwo – Harga Mulai 295 Juta",
+      "subheadline": "Promo Berkah Ramadan | Include PPN | Bisa Custom Design",
+      "cta_primary": "Hitung Estimasi Cicilan",
+      "cta_secondary": "Cek Ketersediaan Unit"
+    },
+    {
+      "type": "gallery",
+      "layout": "responsive grid + swipe slider mobile"
+    },
+    {
+      "type": "unit_types",
+      "title": "Pilihan Unit Promo",
+      "cards": [
+        {
+          "type_name": "C-18",
+          "spec": "45/99",
+          "orientation": "Hadap Barat",
+          "price_normal": 475000000,
+          "price_promo": 430000000
+        },
+        {
+          "type_name": "C-21",
+          "spec": "45/110",
+          "orientation": "Hadap Timur",
+          "price_normal": 513500000,
+          "price_promo": 470000000
+        },
+        {
+          "type_name": "D Series (D-2/D-4/D-6/D-8)",
+          "spec": "30/60",
+          "orientation": "Hadap Barat",
+          "price_normal": 350000000,
+          "price_promo": 295000000
+        }
+      ]
+    },
+    {
+      "type": "specification",
+      "title": "Spesifikasi Rumah",
+      "items": [
+        "2 Kamar Tidur",
+        "1 Kamar Mandi",
+        "Ruang Tamu",
+        "Ruang Makan",
+        "Dapur",
+        "Carport",
+        "Listrik 1300 Watt",
+        "Sambungan PDAM",
+        "Sambungan IndiHome",
+        "Include PPN"
+      ],
+      "note": "Harga belum termasuk BPHTB dan biaya notaris (AJB & balik nama)."
+    },
+    {
+      "type": "mortgage_calculator",
+      "title": "Kalkulator Estimasi Cicilan (DP Minimal 50%)",
+      "logic": {
+        "down_payment_percentage": 50,
+        "interest_default": 8,
+        "tenor_options_years": [5, 10, 15],
+        "formula": "anuitas",
+        "output": [
+          "Total Pinjaman",
+          "Estimasi Cicilan Per Bulan",
+          "Total Pembayaran Akhir"
+        ]
+      },
+      "behavior": "pure_javascript_client_side_no_backend"
+    },
+    {
+      "type": "urgency",
+      "content": "Dari total 71 unit, saat ini tersisa 6 unit pesan bangun. Promo Berkah Ramadan berlaku terbatas dan dapat berakhir sewaktu-waktu."
+    },
+    {
+      "type": "lead_form",
+      "title": "Form Minat Pembelian",
+      "fields": [
+        {
+          "label": "Nama Lengkap",
+          "type": "text",
+          "required": true
+        },
+        {
+          "label": "Nomor Whatsapp Aktif",
+          "type": "tel",
+          "required": true,
+          "validation": "numeric_only"
+        },
+        {
+          "label": "Rencana Pembayaran",
+          "type": "dropdown",
+          "required": true,
+          "options": [
+            "Cash Keras",
+            "Cash Bertahap",
+            "KPR"
+          ]
+        }
+      ],
+      "submit_action": {
+        "type": "redirect_whatsapp",
+        "message_template": "Halo, saya tertarik dengan unit Promo Berkah Ramadan di Fasco Village Bangunjiwo. Nama: {{nama}}, No WA: {{nomor}}, Rencana Pembayaran: {{pembayaran}}. Mohon info ketersediaan dan proses selanjutnya."
+      }
+    }
+  ],
+  "conversion_strategy": {
+    "single_goal": "WhatsApp Lead",
+    "form_gate_before_whatsapp": true,
+    "sticky_cta_bottom_mobile": true,
+    "scarcity_emphasis": true,
+    "promo_highlight_color": "#C9A227"
+  }
+}
