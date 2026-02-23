@@ -1,18 +1,13 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+// This is a static landing page that redirects to WhatsApp.
+// We only need a schema for form validation on the client side.
+export const contactFormSchema = z.object({
+  nama: z.string().min(1, "Nama lengkap wajib diisi"),
+  nomor: z.string().min(1, "Nomor Whatsapp wajib diisi").regex(/^[0-9]+$/, "Hanya angka yang diperbolehkan"),
+  pembayaran: z.enum(["Cash Keras", "Cash Bertahap", "KPR"], {
+    required_error: "Rencana pembayaran wajib dipilih",
+  }),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
-});
-
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type ContactForm = z.infer<typeof contactFormSchema>;
