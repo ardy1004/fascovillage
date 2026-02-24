@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Calculator, Percent, Clock, DollarSign } from "lucide-react";
 
 export function CalculatorSection() {
-  const [price, setPrice] = useState<number>(295000000);
+  const [price, setPrice] = useState<number>(300000000);
   const [dpPercent, setDpPercent] = useState<number>(50);
   const [tenor, setTenor] = useState<number>(10);
   
@@ -67,7 +67,7 @@ export function CalculatorSection() {
               </div>
               <input 
                 type="range" 
-                min={295000000} 
+                min={300000000} 
                 max={600000000} 
                 step={5000000}
                 value={price}
@@ -75,7 +75,7 @@ export function CalculatorSection() {
                 className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-primary"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                <span>Rp 295 Jt</span>
+                <span>Rp 300 Jt</span>
                 <span>Rp 600 Jt</span>
               </div>
             </div>

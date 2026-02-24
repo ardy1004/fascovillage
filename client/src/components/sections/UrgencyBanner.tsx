@@ -7,7 +7,7 @@ export function UrgencyBanner() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="bg-accent text-accent-foreground py-2.5 px-4 sticky top-0 z-50 shadow-md flex justify-center items-center gap-2 text-sm font-medium"
+      className="bg-red-600 text-white py-2.5 px-4 sticky top-0 z-50 shadow-md flex justify-center items-center gap-2 text-sm font-medium"
     >
       <div className="flex items-center gap-2 max-w-7xl mx-auto w-full justify-center">
         <span className="relative flex h-3 w-3">

@@ -25,7 +25,7 @@ const UNITS = [
     type: "30/60",
     facing: "Barat",
     normalPrice: 350000000,
-    promoPrice: 295000000,
+    promoPrice: 300000000,
     features: ["Desain Compact", "2 Kamar Tidur", "1 Kamar Mandi", "Carport", "Harga Terjangkau"],
     image: "https://res.cloudinary.com/dhb8b7nrd/image/upload/v1771864808/image_5_x2vaoz.webp",
     badge: "Best Value"
