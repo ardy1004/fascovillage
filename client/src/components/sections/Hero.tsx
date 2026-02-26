@@ -34,6 +34,10 @@ export function Hero() {
               </span>
             </h1>
             
+            <p className="text-lg md:text-xl font-medium text-muted-foreground flex items-center gap-2">
+              <span>📍</span> Kasihan, Bantul, DI. Yogyakarta
+            </p>
+            
             <p className="text-xl md:text-2xl font-medium text-muted-foreground">
               Harga Mulai <span className="text-muted-foreground line-through">350 Juta</span> <span className="text-accent font-bold">300 Juta</span>
             </p>
