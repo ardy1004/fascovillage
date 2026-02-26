@@ -84,6 +84,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="glass p-4 rounded-xl inline-block">
+                  <p className="text-black font-bold text-xl mb-1">Total 71 Unit</p>
                   <p className="text-primary font-bold text-lg">Lingkungan Asri & Nyaman</p>
                   <p className="text-sm text-foreground/80">Desain modern minimalis</p>
                 </div>
